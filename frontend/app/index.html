@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lyndsee Armstrong Portfolio</title>
+
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/creative.css">
+    <link rel="stylesheet" href="css/creative.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#/home">Lyndsee Armstrong</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a ng-href="#/work">Tech</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/recipes">Food</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a ng-href="Lyndsee-Armstrong-Resume.pdf" download="" style="font-size: 8px;">Download My Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div ng-view></div>
+
+    <footer ng-include="'footer.html'"></footer>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJCzSnISdXjL8Oj976ng8XBJHNTVn1RKE&callback=initMap"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/toastr/toastr.min.js"></script>
+    <script src="js/creative.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/creative.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+    <script src="contact/contact.js"></script>
+    <script src="blog/blog.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="recipes/recipes.js"></script>
+    <script src="work/work.js"></script>
+    <script src="recipe-detail/recipeDetail.js"></script>
+    <script src="add-recipe/addRecipe.js"></script>
+    <script src="home/home.js"></script>
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

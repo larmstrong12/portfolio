@@ -1,0 +1,60 @@
+<section class="no-padding" id="recipe-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 ng-hide="editing">{{ recipe.name }}</h1>
+                <input ng-show="editing" ng-model="recipe.name">
+                <hr class="primary" style="text-align: center">
+            </div>
+            <div class="col-lg-4">
+                <img ng-src="{{ recipe.photo }}" width="300" class="img-responsive">
+                <div class="form-group" ng-show="editing">
+                    <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+                           onchange="angular.element(this).scope().addPhoto()"/>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <p ng-hide="editing">{{ recipe.description }}</p>
+                <textarea ng-show="editing" ng-model="recipe.description"></textarea>
+
+                <div ng-show="editing">
+                <br>
+                <label>Ingredient</label><br>
+                <input ng-model="ingredientName">
+                <button ng-click="addIngredientToRecipe(ingredientName)">Add Ingredient to Recipe</button>
+                </div>
+
+                <ol>
+                    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
+                        <i ng-click="removeIngredientFromRecipe(ingredient)"
+                           ng-show="editing"
+                           class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
+                    </li>
+                </ol>
+                <br>
+                <p ng-hide="editing">{{ recipe.directions }}</p>
+                <textarea ng-show="editing" ng-model="recipe.directions"></textarea>
+            </div>
+        </div>
+
+            <br>
+            <button class="btn btn-sm btn-danger glyphicon glyphicon-trash"
+                    ng-click="deleteRecipe()"> Delete
+            </button>
+
+            <button class="btn btn-sm btn-info glyphicon glyphicon-pencil"
+                    ng-click="editing = !editing"
+                    ng-hide="editing"> Edit
+            </button>
+
+            <button class="btn btn-sm btn-warning glyphicon glyphicon-remove"
+                    ng-click="editing = !editing"
+                    ng-show="editing"> Cancel
+            </button>
+
+            <button class="btn btn-sm btn-success glyphicon glyphicon-floppy-disk"
+                    ng-click="saveEditedRecipe()"
+                    ng-show="editing"> Save
+            </button>
+        </div>
+</section>
