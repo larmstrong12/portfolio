@@ -1,8 +1,11 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
                 <div class="col-md-6">
+                    <div>
+                        <h2 class="section-heading">Add A New Recipe:</h2>
+                    </div>
+                    <br>
                     <div class="form-group">
                         <label>Recipe Name:</label>
                         <input class="form-control" ng-model="recipe.name">
@@ -46,12 +49,16 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="recipe-card">
-                        <h3><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a></h3>
-                        <img class="img-responsive recipe-card-image"
-                             src="{{ recipe.photo }}"
-                             ng-show="recipe.photo">
-                        <p class="recipe-card-description">{{ recipe.description }}</p>
+                    <div class="container">
+                        <div class="recipe-card">
+                            <h3>
+                                <a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a>
+                            </h3>
+                            <img class="img-responsive recipe-card-image"
+                                 src="{{ recipe.photo }}"
+                                 ng-show="recipe.photo">
+                            <p class="recipe-card-description">{{ recipe.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>

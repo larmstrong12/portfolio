@@ -3,20 +3,19 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">My Favorite Recipes</h2>
+                <h5>If you're like me, food is a must! Share some of your favorite recipes and I will share mine.</h5>
                 <hr class="primary">
             </div>
             <div class="col-lg-3" ng-repeat="recipe in recipes" style="text-align: left">
                 <h2>
                     <a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a>
                 </h2>
-                <img class="img-responsive recipe-card-image" ng-src="{{ recipe.photo }}" style="height: 200px; width: 200px">
+                <img class="img-responsive recipe-card-image" ng-src="{{ recipe.photo }}">
                 <p class="recipe-card-description">{{ recipe.description }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="btn btn-primary btn-xl page-scroll">
-                <a href="#/add-recipe">Add A New Recipe Here</a>
-            </div>
+            <a href="#/add-recipe" class="btn btn-primary btn-xl page-scroll">Add New Recipe</a>
         </div>
     </div>
 </section>
