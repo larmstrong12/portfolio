@@ -336,11 +336,11 @@ footer {
 }
 
 .fa-instagram {
-    color: #2B4871;
+    color: #181818;
 }
 
 .fa-twitter {
-    color: #246F5E;
+    color: #6f393c;
 }
 
 .fa-pinterest-p {
@@ -361,7 +361,7 @@ footer {
   text-align: center;
   color: #222;
     outline-color: #AC8138;
-    padding-top: 30%;
+    padding-top: 25%;
 }
 #header .header-content{
   position: relative;
