@@ -16,6 +16,6 @@ angular.module('myApp', [
     config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
 
-        RestangularProvider.setBaseUrl('/app');
+        RestangularProvider.setBaseUrl('/');
         RestangularProvider.setRequestSuffix('/');
     }]);
